@@ -14,7 +14,7 @@ export const Contact = () => {
                </div>
                <div className="c-social">
                   <img src="tw.png" alt="twitter" />
-                  <img src="tw.png" alt="telegram" />
+                  <img src="tg.png" alt="telegram" />
                </div>
                <div className="c-cap">
                   <span>

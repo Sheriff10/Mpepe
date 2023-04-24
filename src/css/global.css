@@ -1,186 +1,283 @@
-.wrapper{
-    background: url('../../public/introbg.png') no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-
+.wrapper {
+   background: url("../../public/introbg.png") no-repeat;
+   background-size: cover;
+   min-height: 100vh;
+   padding: 0;
+   margin: 0;
 }
-.header{
-    padding: 18px 1px;
+.header {
+   padding: 18px 1px;
 }
-.header .menu-link{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header .menu-link {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 .header a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
+   color: #fff;
+   font-weight: bold;
+   text-decoration: none;
+}
+.header .menu-btn {
+   position: relative;
+   padding: 3px;
+   height: 30px;
+   width: 30px;
+   float: right;
+   display: none;
+   /* transform: translateY(100px); */
+   justify-content: center;
+   align-items: center;
+}
+.header .menu-btn .menu-btn-burger {
+   background: #fff;
+   height: 3px;
+   width: 100%;
+   border-radius: 5px;
+   transition: all 0.5s ease-in-out;
+}
+.header .menu-btn .menu-btn-burger::before,
+.header .menu-btn .menu-btn-burger::after {
+   content: "";
+   position: absolute;
+   background: #fff;
+   height: 3px;
+   width: 100%;
+   border-radius: 5px;
+   transition: all 0.5s ease-in-out;
 }
 
-.intro{
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
+.header .menu-btn .menu-btn-burger::before {
+   transform: translateY(7px);
 }
-.intro .intro-side-img{
-    display: flex;
-    justify-content: end;
-    /* position: absolute; */
+.header .menu-btn .menu-btn-burger::after {
+   transform: translateY(-7px);
 }
-.intro .intro-side-img img{
-    display: block;
-    padding: 10px;
+.header .menu-btn .menu-btn-burger.open {
+   transform: translateX(-50px);
+   background: transparent;
 }
-.intro .intro-btn{
-    position: absolute;
-    bottom: 25px;
-    width: 100%;
-    text-align: center;
+.header .menu-btn .menu-btn-burger.open::before {
+   transform: rotate(-45deg) translate(35px, 35px);
 }
-.intro .intro-btn .btn, .about .btn{
-    padding: 5px 40px;
-    border-radius: 20px;
-    color: #fff;
-    border: 3px solid #fff;
+.header .menu-btn .menu-btn-burger.open::after {
+   transform: rotate(45deg) translate(35px, -35px);
+}
+.header .mb-logo{
+    display: none;
 }
 
+.intro {
+   min-height: 80vh;
+   display: flex;
+   align-items: center;
+}
+.intro .intro-side-img {
+   display: flex;
+   justify-content: end;
+   /* position: absolute; */
+}
+.intro .intro-side-img img {
+   display: block;
+   padding: 10px;
+}
+.intro .intro-btn {
+   position: absolute;
+   bottom: 25px;
+   right: 0;
+   left: 0;
+   /* width: 100%; */
+   text-align: center;
+}
+.intro .intro-btn .btn,
+.about .btn {
+   padding: 5px 40px;
+   border-radius: 20px;
+   color: #fff;
+   border: 3px solid #fff;
+}
 
-.about{
-    background: #363752;
-    color: #fff;
-    padding: 40px 1px;
+.about {
+   background: #363752;
+   color: #fff;
+   padding: 40px 1px;
 }
 .about .abt-con {
-    padding-right: 20px;
+   padding-right: 20px;
 }
-.about .abt-con .abt-con-head{
-    padding: 10px 1px;
+.about .abt-con .abt-con-head {
+   padding: 10px 1px;
 }
-.about .abt-con-text{
-    color: #bfbfbf;
+.about .abt-con-text {
+   color: #bfbfbf;
 }
 
-.htb{
-    background: url('../../public/BG.png');
-    color: #fff;
-    padding: 20px 1px;
+.htb {
+   background: url("../../public/BG.png");
+   color: #fff;
+   padding: 20px 1px;
 }
 .htb .htb-head {
-    padding: 20px 1px ;
+   padding: 20px 1px;
 }
 .htb .htb-con {
-    margin: 30px;
-    border: 3px solid #fff;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    padding: 5px 1px;
-    box-shadow: 0px 0px 20px #fff;
+   margin: 30px;
+   border: 3px solid #fff;
+   border-radius: 100px;
+   display: flex;
+   align-items: center;
+   padding: 5px 1px;
+   box-shadow: 0px 0px 20px #fff;
 }
-.htb span{
-    font-weight: bold;
-    font-size: 18px;
-    padding: 5px 1px;
+.htb span {
+   font-weight: bold;
+   font-size: 18px;
+   padding: 5px 1px;
 }
-.htb small{
-    color: #969696;
+.htb small {
+   color: #969696;
 }
-.htb .htb-img{
-    padding: 30px 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.htb .htb-img {
+   padding: 30px 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-.htb img{
-    width: 70px;
+.htb img {
+   width: 70px;
 }
-.htb .tXn .htb-con{
-    justify-content: end;   
-    transform: translateX(-300px);
+.htb .tXn .htb-con {
+   justify-content: end;
+   transform: translateX(-300px);
 }
-.htb .tXp .htb-con{
-    transform: translateX(340px);
-}
-
-
-.tk{
-    background: #363752;
+.htb .tXp .htb-con {
+   transform: translateX(340px);
 }
 
-.tk .tk-head{
-    color: #fff;
-    padding: 20px 1px;
+.tk {
+   background: #363752;
 }
-.tk table{
-    width: 100%;
-    text-align: center;
+
+.tk .tk-head {
+   color: #fff;
+   padding: 20px 1px;
+}
+.tk table {
+   width: 100%;
+   text-align: center;
 }
 .tk table thead th {
-    background: #fff;
-    padding: 10px;
-    border: 2px solid #fff;
-    font-weight: bold;
-
+   background: #fff;
+   padding: 10px;
+   border: 2px solid #fff;
+   font-weight: bold;
 }
 .tk table td {
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 7px;
-    box-shadow: 0px 0px 10px #fff;
+   border: 2px solid #fff;
+   color: #fff;
+   padding: 7px;
+   box-shadow: 0px 0px 10px #fff;
 }
-.tk .tk-img{
-    text-align: right;
+.tk .tk-img {
+   text-align: right;
 }
 
 .contact {
-    background: url('../../public/Contact_BG.png') no-repeat;
-    background-size: cover;
-    color: #c7c6c6;
-    margin: 0;
+   background: url("../../public/Contact_BG.png") no-repeat;
+   background-size: cover;
+   color: #c7c6c6;
+   margin: 0;
 }
-.contact .c-head{
-    padding: 20px 1px;
+.contact .c-head {
+   padding: 20px 1px;
 }
-.contact .c-head img{
-    margin: 20px;
+.contact .c-head img {
+   margin: 20px;
 }
-.contact .c-mail{
-    padding: 10px;
+.contact .c-mail {
+   padding: 10px;
 }
-.contact .c-social img{
-    margin: 10px;
+.contact .c-social img {
+   margin: 10px;
 }
-.contact .c-cap{
-    margin-top: 10px;
-    margin-bottom: 40px;
+.contact .c-cap {
+   margin-top: 10px;
+   margin-bottom: 40px;
 }
-.contact .c-copy{
-    background: #363752;
-    padding: 10px;
+.contact .c-copy {
+   background: #363752;
+   padding: 10px;
 }
 
-@media(max-width: 1024px) {
-    .htb .tXn .htb-con, .htb .tXp .htb-con{
-        transform: translateX(0px);
-        border-radius: 30px;
-        margin-bottom: 30px;
-    }
-    p, .htb small{
-        font-size: 14px;
-    }
-    .htb .s-wrp{
-        margin: 20px 1px;
-        font-size: 20px;
-    }
-    .contact{
-        background: url('../../public//Contact_BGmb.png') ;
-    }
-    .wrapper{
-        background: url('../../public/inbgmb.png');
-    }
-    .contact, .wrapper{
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+@media (max-width: 1024px) {
+    .header .menu-link {
+        background: #fff;
+        color: #000;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 90px;
+        padding: 10px 20px;
+      transition: all 1s cubic-bezier(0.23, -0.6, 0.81, 1.61);
+      transform: translateY(-300px);
+      z-index: 5;
+     }
+     .header .menu-link a {
+        padding: 10px 1px;
+        border-bottom: 1px solid #0000002d;
+        font-weight: bold;
+     }
+     .header .menu-link .logo {
+        display: none;
+     }
+   .header .menu-btn {
+      display: flex;
+      position: relative;
+      transform: translateY(0px);
+   }
+   .header .menu-link.open {
+      transform: translateY(0);
+      transition: all 1s cubic-bezier(0.23, -0.6, 0.81, 1.61);
+   }
+   .header .mb-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;left: 0;right: 0;
+    padding: 5px 20px;
+    z-index: 6;
+   }
+   .htb .tXn .htb-con,
+   .htb .tXp .htb-con {
+      transform: translateX(0px);
+      border-radius: 30px;
+      margin-bottom: 30px;
+   }
+   p,
+   .htb small {
+      font-size: 14px;
+   }
+   .htb .s-wrp {
+      margin: 20px 0px;
+      font-size: 20px;
+   }
+   .contact {
+      background: url("../../public//Contact_BGmb.png");
+   }
+   .wrapper {
+      background: url("../../public/inbgmb.png");
+   }
+   .contact,
+   .wrapper {
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+   .header .menu-link,
+   .header .menu-link a {
+      display: block;
+      color: #000;
+   }
+   
 }

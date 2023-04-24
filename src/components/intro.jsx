@@ -3,7 +3,7 @@ import React from "react";
 export const Intro = () => {
    return (
       <div className="intro">
-         <div className="container-fluid">
+         <div className="container">
             <div className="intro-btn">
                <button className="btn btn-sm">Play Now</button>
             </div>
