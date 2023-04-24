@@ -1,0 +1,186 @@
+.wrapper{
+    background: url('../../public/introbg.png') no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+.header{
+    padding: 18px 1px;
+}
+.header .menu-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.intro{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.intro .intro-side-img{
+    display: flex;
+    justify-content: end;
+    /* position: absolute; */
+}
+.intro .intro-side-img img{
+    display: block;
+    padding: 10px;
+}
+.intro .intro-btn{
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+}
+.intro .intro-btn .btn, .about .btn{
+    padding: 5px 40px;
+    border-radius: 20px;
+    color: #fff;
+    border: 3px solid #fff;
+}
+
+
+.about{
+    background: #363752;
+    color: #fff;
+    padding: 40px 1px;
+}
+.about .abt-con {
+    padding-right: 20px;
+}
+.about .abt-con .abt-con-head{
+    padding: 10px 1px;
+}
+.about .abt-con-text{
+    color: #bfbfbf;
+}
+
+.htb{
+    background: url('../../public/BG.png');
+    color: #fff;
+    padding: 20px 1px;
+}
+.htb .htb-head {
+    padding: 20px 1px ;
+}
+.htb .htb-con {
+    margin: 30px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    padding: 5px 1px;
+    box-shadow: 0px 0px 20px #fff;
+}
+.htb span{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 1px;
+}
+.htb small{
+    color: #969696;
+}
+.htb .htb-img{
+    padding: 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.htb img{
+    width: 70px;
+}
+.htb .tXn .htb-con{
+    justify-content: end;   
+    transform: translateX(-300px);
+}
+.htb .tXp .htb-con{
+    transform: translateX(340px);
+}
+
+
+.tk{
+    background: #363752;
+}
+
+.tk .tk-head{
+    color: #fff;
+    padding: 20px 1px;
+}
+.tk table{
+    width: 100%;
+    text-align: center;
+}
+.tk table thead th {
+    background: #fff;
+    padding: 10px;
+    border: 2px solid #fff;
+    font-weight: bold;
+
+}
+.tk table td {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 7px;
+    box-shadow: 0px 0px 10px #fff;
+}
+.tk .tk-img{
+    text-align: right;
+}
+
+.contact {
+    background: url('../../public/Contact_BG.png') no-repeat;
+    background-size: cover;
+    color: #c7c6c6;
+    margin: 0;
+}
+.contact .c-head{
+    padding: 20px 1px;
+}
+.contact .c-head img{
+    margin: 20px;
+}
+.contact .c-mail{
+    padding: 10px;
+}
+.contact .c-social img{
+    margin: 10px;
+}
+.contact .c-cap{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.contact .c-copy{
+    background: #363752;
+    padding: 10px;
+}
+
+@media(max-width: 1024px) {
+    .htb .tXn .htb-con, .htb .tXp .htb-con{
+        transform: translateX(0px);
+        border-radius: 30px;
+        margin-bottom: 30px;
+    }
+    p, .htb small{
+        font-size: 14px;
+    }
+    .htb .s-wrp{
+        margin: 20px 1px;
+        font-size: 20px;
+    }
+    .contact{
+        background: url('../../public//Contact_BGmb.png') ;
+    }
+    .wrapper{
+        background: url('../../public/inbgmb.png');
+    }
+    .contact, .wrapper{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
